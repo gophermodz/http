@@ -1,4 +1,4 @@
-package infra
+package httpinfra
 
 import (
 	"context"
@@ -21,10 +21,15 @@ import (
 )
 
 const (
-	instrumentationName = "github.com/gophermodz/http/infra"
+	instrumentationName = "github.com/gophermodz/http/httpinfra"
 )
 
 func (s *Server) initTracer(ctx context.Context) {
+	if !s.config.TracerEnabled {
+		nop := trace.NewNoopTracerProvider()
+		s.tracer = nop.Tracer(s.config.TracerServiceName)
+		return
+	}
 	client := otlptracegrpc.NewClient()
 	exporter, err := otlptrace.New(ctx, client)
 	if err != nil {
@@ -35,7 +40,7 @@ func (s *Server) initTracer(ctx context.Context) {
 		sdktrace.WithBatcher(exporter),
 		sdktrace.WithResource(resource.NewWithAttributes(
 			semconv.SchemaURL,
-			semconv.ServiceNameKey.String(s.config.OtelServiceName),
+			semconv.ServiceNameKey.String(s.config.TracerServiceName),
 			semconv.ServiceVersionKey.String(s.config.Version),
 		)),
 	)

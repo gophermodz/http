@@ -1,17 +1,17 @@
-package infra
+package httpinfra
 
 import "time"
 
 type config struct {
-	Host            string
-	Port            int
-	ReadTimeout     time.Duration
-	WriteTimeout    time.Duration
-	IdleTimeout     time.Duration
-	TracerEnabled   bool
-	OtelServiceName string
-	Version         string
-	Revision        string
+	Host              string
+	Port              int
+	ReadTimeout       time.Duration
+	WriteTimeout      time.Duration
+	IdleTimeout       time.Duration
+	TracerEnabled     bool
+	TracerServiceName string
+	Version           string
+	Revision          string
 }
 
 // Option specifies server configuration options.
@@ -70,7 +70,7 @@ func WithTracer() Option {
 // WithOtelServiceName sets the otel service name for the server.
 func WithOtelServiceName(name string) Option {
 	return optionFunc(func(c *config) {
-		c.OtelServiceName = name
+		c.TracerServiceName = name
 	})
 }
 
@@ -98,14 +98,14 @@ func (c *config) ApplyOptions(opts ...Option) {
 // NewDefaultConfig returns a new default config.
 func NewDefaultConfig() *config {
 	return &config{
-		Host:            "",
-		Port:            8081,
-		ReadTimeout:     10 * time.Second,
-		WriteTimeout:    10 * time.Second,
-		IdleTimeout:     20 * time.Second,
-		TracerEnabled:   false,
-		OtelServiceName: "unknown_service",
-		Version:         "unknown",
-		Revision:        "unknown",
+		Host:              "",
+		Port:              8081,
+		ReadTimeout:       10 * time.Second,
+		WriteTimeout:      10 * time.Second,
+		IdleTimeout:       20 * time.Second,
+		TracerEnabled:     false,
+		TracerServiceName: "unknown_service",
+		Version:           "unknown",
+		Revision:          "unknown",
 	}
 }

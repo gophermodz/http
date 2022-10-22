@@ -1,4 +1,4 @@
-package infra
+package httpinfra
 
 import (
 	"bytes"
@@ -23,18 +23,30 @@ type Server struct {
 	tracerProvider *sdktrace.TracerProvider
 }
 
-func New(logger *zap.Logger, opts ...Option) (*Server, error) {
+func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	s.router.ServeHTTP(w, r)
+}
+
+func New(ctx context.Context, logger *zap.Logger, opts ...Option) (*Server, error) {
 	cfg := NewDefaultConfig()
 	for _, opt := range opts {
 		opt.apply(cfg)
 	}
-	srv := &Server{
+	s := &Server{
 		router: mux.NewRouter(),
 		config: cfg,
 		logger: logger,
 	}
 
-	return srv, nil
+	s.initTracer(ctx)
+	s.router.Use(NewOpenTelemetryMiddleware(s.config.TracerServiceName))
+
+	s.router.Handle("/metrics", promhttp.Handler())
+	s.router.PathPrefix("/debug/pprof/").Handler(http.DefaultServeMux)
+	s.router.HandleFunc("/api/info", s.infoHandler).Methods("GET")
+	s.router.HandleFunc("/api/healthz", s.healthzHandler).Methods("GET")
+
+	return s, nil
 }
 
 // Run starts the HTTP server.
@@ -49,16 +61,6 @@ func (s *Server) Run(ctx context.Context) error {
 		WriteTimeout: s.config.WriteTimeout,
 		IdleTimeout:  s.config.IdleTimeout,
 	}
-
-	if s.config.TracerEnabled {
-		s.initTracer(ctx)
-		s.router.Use(NewOpenTelemetryMiddleware(s.config.OtelServiceName))
-	}
-
-	s.router.Handle("/metrics", promhttp.Handler())
-	s.router.PathPrefix("/debug/pprof/").Handler(http.DefaultServeMux)
-	s.router.HandleFunc("/api/info", s.infoHandler).Methods("GET")
-	s.router.HandleFunc("/api/healthz", s.healthzHandler).Methods("GET")
 
 	go func() {
 		<-ctx.Done()
