@@ -67,8 +67,8 @@ func WithTracer() Option {
 	})
 }
 
-// WithOtelServiceName sets the otel service name for the server.
-func WithOtelServiceName(name string) Option {
+// WithTracerServiceName sets the tracer service name for the server.
+func WithTracerServiceName(name string) Option {
 	return optionFunc(func(c *config) {
 		c.TracerServiceName = name
 	})
