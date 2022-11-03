@@ -10,9 +10,6 @@ import (
 var hostname, _ = os.Hostname()
 
 func (s *Server) infoHandler(w http.ResponseWriter, r *http.Request) {
-	_, span := s.tracer.Start(r.Context(), "infoHandler")
-	defer span.End()
-
 	data := RuntimeResponse{
 		Hostname:     hostname,
 		Version:      s.config.Version,

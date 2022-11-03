@@ -27,7 +27,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	s.router.ServeHTTP(w, r)
 }
 
-func New(ctx context.Context, logger *zap.Logger, opts ...Option) (*Server, error) {
+func New(ctx context.Context, logger *zap.Logger, opts ...Option) *Server {
 	cfg := NewDefaultConfig()
 	for _, opt := range opts {
 		opt.apply(cfg)
@@ -38,15 +38,17 @@ func New(ctx context.Context, logger *zap.Logger, opts ...Option) (*Server, erro
 		logger: logger,
 	}
 
-	s.initTracer(ctx)
-	s.router.Use(NewOpenTelemetryMiddleware(s.config.TracerServiceName))
+	if cfg.TracerEnabled {
+		s.initTracer(ctx)
+		s.router.Use(NewOpenTelemetryMiddleware(s.config.TracerServiceName))
+	}
 
 	s.router.Handle("/metrics", promhttp.Handler())
 	s.router.PathPrefix("/debug/pprof/").Handler(http.DefaultServeMux)
 	s.router.HandleFunc("/api/info", s.infoHandler).Methods("GET")
 	s.router.HandleFunc("/api/healthz", s.healthzHandler).Methods("GET")
 
-	return s, nil
+	return s
 }
 
 // Run starts the HTTP server.

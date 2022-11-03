@@ -12,10 +12,7 @@ import (
 
 func TestServer(t *testing.T) {
 	l := zap.NewNop()
-	server, err := New(context.Background(), l)
-	if err != nil {
-		return
-	}
+	server := New(context.Background(), l)
 	t.Run("healthz", func(t *testing.T) {
 		scenarios := []httptest.APIScenario{
 			{
