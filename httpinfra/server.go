@@ -45,8 +45,8 @@ func New(ctx context.Context, logger *zap.Logger, opts ...Option) *Server {
 
 	s.router.Handle("/metrics", promhttp.Handler())
 	s.router.PathPrefix("/debug/pprof/").Handler(http.DefaultServeMux)
-	s.router.HandleFunc("/api/info", s.infoHandler).Methods("GET")
-	s.router.HandleFunc("/api/healthz", s.healthzHandler).Methods("GET")
+	s.router.HandleFunc("/info", s.infoHandler).Methods("GET")
+	s.router.HandleFunc("/healthz", s.healthzHandler).Methods("GET")
 
 	return s
 }

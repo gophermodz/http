@@ -18,7 +18,7 @@ func TestServer(t *testing.T) {
 			{
 				Name:            "success",
 				Method:          http.MethodGet,
-				URL:             "/api/healthz",
+				URL:             "/healthz",
 				ExpectedStatus:  http.StatusOK,
 				ExpectedContent: []string{`{"status":"ok"}`},
 				Handler:         server,
@@ -26,7 +26,7 @@ func TestServer(t *testing.T) {
 			{
 				Name:           "wrong method",
 				Method:         http.MethodPost,
-				URL:            "/api/healthz",
+				URL:            "/healthz",
 				ExpectedStatus: http.StatusMethodNotAllowed,
 				Handler:        server,
 			},
