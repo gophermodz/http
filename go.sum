@@ -265,6 +265,8 @@ go.opentelemetry.io/contrib/propagators/aws v1.13.0 h1:9qOAQhTeJGiaYNfCCnRmL12XZ
 go.opentelemetry.io/contrib/propagators/aws v1.13.0/go.mod h1:XXahyNfhmY382jrQPE1sKXxTgfnXbx3KzNOweRJV8+A=
 go.opentelemetry.io/contrib/propagators/aws v1.14.0 h1:At9KgnobpQSaC7LYQ2JpDEOxLlMW6EsmLPsCAFfXSNg=
 go.opentelemetry.io/contrib/propagators/aws v1.14.0/go.mod h1:KB4fnXEZfSGUC39lmyXfqfuw7D1C8n01nXxsYgKvQhc=
+go.opentelemetry.io/contrib/propagators/aws v1.15.0 h1:FLe+bRTMAhEALItDQt1U2S/rdq8/rGGJTJpOpCDvMu0=
+go.opentelemetry.io/contrib/propagators/aws v1.15.0/go.mod h1:Z/nqdjqKjErrS3gYoEMZt8//dt8VZbqalD0V+7vh7lM=
 go.opentelemetry.io/contrib/propagators/b3 v1.11.1 h1:icQ6ttRV+r/2fnU46BIo/g/mPu6Rs5Ug8Rtohe3KqzI=
 go.opentelemetry.io/contrib/propagators/b3 v1.11.1/go.mod h1:ECIveyMXgnl4gorxFcA7RYjJY/Ql9n20ubhbfDc3QfA=
 go.opentelemetry.io/contrib/propagators/b3 v1.12.0 h1:OtfTF8bneN8qTeo/j92kcvc0iDDm4bm/c3RzaUJfiu0=
@@ -333,6 +335,8 @@ go.opentelemetry.io/otel/sdk v1.12.0 h1:8npliVYV7qc0t1FKdpU08eMnOjgPFMnriPhn0HH4
 go.opentelemetry.io/otel/sdk v1.12.0/go.mod h1:WYcvtgquYvgODEvxOry5owO2y9MyciW7JqMz6cpXShE=
 go.opentelemetry.io/otel/sdk v1.13.0 h1:BHib5g8MvdqS65yo2vV1s6Le42Hm6rrw08qU6yz5JaM=
 go.opentelemetry.io/otel/sdk v1.13.0/go.mod h1:YLKPx5+6Vx/o1TCUYYs+bpymtkmazOMT6zoRrC7AQ7I=
+go.opentelemetry.io/otel/sdk v1.14.0 h1:PDCppFRDq8A1jL9v6KMI6dYesaq+DFcDZvjsoGvxGzY=
+go.opentelemetry.io/otel/sdk v1.14.0/go.mod h1:bwIC5TjrNG6QDCHNWvW4HLHtUQ4I+VQDsnjhvyZCALM=
 go.opentelemetry.io/otel/trace v1.11.1 h1:ofxdnzsNrGBYXbP7t7zpUK281+go5rF7dvdIZXF8gdQ=
 go.opentelemetry.io/otel/trace v1.11.1/go.mod h1:f/Q9G7vzk5u91PhbmKbg1Qn0rzH1LJ4vbPHFGkTPtOk=
 go.opentelemetry.io/otel/trace v1.11.2 h1:Xf7hWSF2Glv0DE3MH7fBHvtpSBsjcBUe5MYAmZM/+y0=
@@ -495,6 +499,8 @@ golang.org/x/sys v0.0.0-20220919091848-fb04ddd9f9c8 h1:h+EGohizhe9XlX18rfpa8k8RA
 golang.org/x/sys v0.0.0-20220919091848-fb04ddd9f9c8/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.3.0 h1:w8ZOecv6NaNa/zC8944JTU3vz4u6Lagfk4RPQxv92NQ=
 golang.org/x/sys v0.3.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/sys v0.5.0 h1:MUK/U/4lj1t1oPg0HfuXDN/Z1wv31ZJ/YcPiGccS4DU=
+golang.org/x/sys v0.5.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod h1:bj7SfCRtBDWHUb9snDiAeCFNEtKQo2Wmx5Cou7ajbmo=
 golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod h1:jbD1KX2456YbFQfuXm/mYQcufACuNUgVhRMnK/tPxf8=
 golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
