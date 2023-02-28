@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/gorilla/mux v1.8.0
 	github.com/prometheus/client_golang v1.14.0
-	go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.39.0
+	go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.40.0
 	go.opentelemetry.io/contrib/propagators/aws v1.14.0
 	go.opentelemetry.io/contrib/propagators/b3 v1.15.0
 	go.opentelemetry.io/contrib/propagators/jaeger v1.14.0
