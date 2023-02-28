@@ -255,6 +255,8 @@ go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.38
 go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.38.0/go.mod h1:iUSPEXZM7sckWSTCtzog1lU42Qaiu9U2WY6vdqwFHDI=
 go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.39.0 h1:+MLOxP3ot+XZZI1f+5M/uRCkAL7mjabNh0g4lMflG4Q=
 go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.39.0/go.mod h1:Akz6p0hPFEJf0vHyyDm0ZoY3ZS2gyjdaNL9KTylDuq8=
+go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.40.0 h1:KToMJH0+5VxWBGtfeluRmWR3wLtE7nP+80YrxNI5FGs=
+go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.40.0/go.mod h1:RK3vgddjxVcF1q7IBVppzG6k2cW/NBnZHQ3X4g+EYBQ=
 go.opentelemetry.io/contrib/propagators/aws v1.11.1 h1:bPoZrezYKRb3HXrW6I7QmYLz5bStFrb4ZWmcRw8k+Gg=
 go.opentelemetry.io/contrib/propagators/aws v1.11.1/go.mod h1:5jZiQXbiLiVtJP2YRe/IbHURUnWMVsnj8MVinGPAKJs=
 go.opentelemetry.io/contrib/propagators/aws v1.12.0 h1:n3lNyZs2ytVEfFhcn2QO5Z80lgrMXyP1Ncx0C7rUU8A=
