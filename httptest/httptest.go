@@ -55,7 +55,7 @@ func (scenario *APIScenario) Test(t *testing.T) {
 	res := recorder.Result()
 	defer res.Body.Close()
 
-	var prefix = scenario.Name
+	prefix := scenario.Name
 	if prefix == "" {
 		prefix = fmt.Sprintf("%s:%s", scenario.Method, scenario.URL)
 	}
