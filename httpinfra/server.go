@@ -16,6 +16,13 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
+type Logger interface {
+	With(...any) Logger
+	Debug(string, ...any)
+	Info(string, ...any)
+	Error(string, ...any)
+}
+
 type Server struct {
 	router         *mux.Router
 	config         *config
