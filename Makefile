@@ -1,8 +1,15 @@
 .PHONY: lint test test-coverage precommit help
 
+# run this once to install tools required for development.
+init-tools:
+	cd tools && \
+	go mod tidy && \
+	go mod verify && \
+	go generate -x -tags "tools"
+
 # run golangci-lint
-lint:
-	golangci-lint run --timeout=30m ./...
+lint: init-tools
+	./bin/golangci-lint run --timeout=30m ./...
 
 # run go test
 test:

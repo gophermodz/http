@@ -17,7 +17,6 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.7.0"
 	"go.opentelemetry.io/otel/trace"
-	"go.uber.org/zap"
 )
 
 const (
@@ -33,7 +32,7 @@ func (s *Server) initTracer(ctx context.Context) {
 	client := otlptracegrpc.NewClient()
 	exporter, err := otlptrace.New(ctx, client)
 	if err != nil {
-		s.logger.Error("creating OTLP trace exporter", zap.Error(err))
+		s.logger.Error("creating OTLP trace exporter", err)
 	}
 
 	s.tracerProvider = sdktrace.NewTracerProvider(

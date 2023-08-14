@@ -2,16 +2,15 @@ package httpinfra
 
 import (
 	"context"
+	"log/slog"
 	"net/http"
 	"testing"
-
-	"go.uber.org/zap"
 
 	"github.com/gophermodz/http/httptest"
 )
 
 func TestServer(t *testing.T) {
-	l := zap.NewNop()
+	l := slog.Default()
 	server := New(context.Background(), l)
 	t.Run("healthz", func(t *testing.T) {
 		scenarios := []httptest.APIScenario{
