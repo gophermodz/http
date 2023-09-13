@@ -190,6 +190,8 @@ go.opentelemetry.io/contrib/propagators/aws v1.17.0 h1:IX8d7l2uRw61BlmZBOTQFaK+y
 go.opentelemetry.io/contrib/propagators/aws v1.17.0/go.mod h1:pAlCYRWff4uGqRXOVn3WP8pDZ5E0K56bEoG7a1VSL4k=
 go.opentelemetry.io/contrib/propagators/aws v1.18.0 h1:8SFScyYfxZK/MaW1iW17h/RhHNogbDtpwNJ6Ce95h0A=
 go.opentelemetry.io/contrib/propagators/aws v1.18.0/go.mod h1:0ssYM4GfgGWeoJKLcXduZowVIbIlWd8zCY0CdQqYA0w=
+go.opentelemetry.io/contrib/propagators/aws v1.19.0 h1:fXXcgurRq5CbEKxHg8Ge9pgTMSaCX9KcBnELHe9bHbc=
+go.opentelemetry.io/contrib/propagators/aws v1.19.0/go.mod h1:W1bbfg19rs+luEUEYKSR65H2psL2YFutZmPWOdaswJg=
 go.opentelemetry.io/contrib/propagators/b3 v1.17.0 h1:ImOVvHnku8jijXqkwCSyYKRDt2YrnGXD4BbhcpfbfJo=
 go.opentelemetry.io/contrib/propagators/b3 v1.17.0/go.mod h1:IkfUfMpKWmynvvE0264trz0sf32NRTZL4nuAN9AbWRc=
 go.opentelemetry.io/contrib/propagators/b3 v1.18.0 h1:hhSlPVi9AQwOmbMmptPNLfRZOLgENdRM2kb7z9LFe1A=

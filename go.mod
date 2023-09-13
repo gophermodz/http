@@ -6,7 +6,7 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/prometheus/client_golang v1.16.0
 	go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux v0.44.0
-	go.opentelemetry.io/contrib/propagators/aws v1.18.0
+	go.opentelemetry.io/contrib/propagators/aws v1.19.0
 	go.opentelemetry.io/contrib/propagators/b3 v1.18.0
 	go.opentelemetry.io/contrib/propagators/jaeger v1.18.0
 	go.opentelemetry.io/contrib/propagators/ot v1.18.0
