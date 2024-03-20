@@ -2,7 +2,7 @@ module github.com/deliveryhero/dh-adtech-advertisers/tools
 
 go 1.21
 
-require github.com/golangci/golangci-lint v1.57.0
+require github.com/golangci/golangci-lint v1.57.1
 
 require (
 	4d63.com/gocheckcompilerdirectives v1.2.1 // indirect
@@ -110,7 +110,7 @@ require (
 	github.com/nunnatsa/ginkgolinter v0.16.1 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect
-	github.com/pelletier/go-toml/v2 v2.1.1 // indirect
+	github.com/pelletier/go-toml/v2 v2.2.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/polyfloyd/go-errorlint v1.4.8 // indirect
 	github.com/prometheus/client_golang v1.12.1 // indirect
