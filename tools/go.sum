@@ -260,6 +260,7 @@ github.com/golangci/golangci-lint v1.56.0/go.mod h1:ZqfKpUUZ+i4MTGqc3G5t18U+5cyX
 github.com/golangci/golangci-lint v1.56.1/go.mod h1:sOHqnOxdEZ0u9JYrDuofOaIyO0jRgT8Y6nWfzuoSv0Y=
 github.com/golangci/golangci-lint v1.56.2/go.mod h1:7CfNO675+EY7j84jihO4iAqDQ80s3HCjcc5M6B7SlZQ=
 github.com/golangci/golangci-lint v1.57.0/go.mod h1:xPTMopcNJBEEhxKaL1iW8kGTCc8SuqAqHY68MnlihyI=
+github.com/golangci/golangci-lint v1.57.1/go.mod h1:zLcHhz3NHc88T5zV2j75lyc0zH3LdOPOybblYa4p0oI=
 github.com/golangci/lint-1 v0.0.0-20191013205115-297bf364a8e0 h1:MfyDlzVjl1hoaPzPD4Gpb/QgoRfSBR0jdhwGyAWwMSA=
 github.com/golangci/lint-1 v0.0.0-20191013205115-297bf364a8e0/go.mod h1:66R6K6P6VWk9I95jvqGxkqJxVWGFy9XlDwLwVz1RCFg=
 github.com/golangci/maligned v0.0.0-20180506175553-b1d89398deca h1:kNY3/svz5T29MYHubXix4aDDuE3RWHkPvopM/EDv/MA=
@@ -474,6 +475,7 @@ github.com/pelletier/go-toml v1.9.5/go.mod h1:u1nR/EPcESfeI/szUZKdtJ0xRNbUoANCko
 github.com/pelletier/go-toml/v2 v2.0.5 h1:ipoSadvV8oGUjnUbMub59IDPPwfxF694nG/jwbMiyQg=
 github.com/pelletier/go-toml/v2 v2.0.5/go.mod h1:OMHamSCAODeSsVrwwvcJOaoN0LIUIaFVNZzmWyNfXas=
 github.com/pelletier/go-toml/v2 v2.1.1/go.mod h1:tJU2Z3ZkXwnxa4DPO899bsyIoywizdUvyaeZurnPPDc=
+github.com/pelletier/go-toml/v2 v2.2.0/go.mod h1:1t835xjRzz80PqgE6HHgN2JOsmgYu/h4qDAS4n929Rs=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
