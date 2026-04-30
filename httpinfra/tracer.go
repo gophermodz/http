@@ -2,6 +2,7 @@ package httpinfra
 
 import (
 	"context"
+	"log/slog"
 
 	"github.com/gorilla/mux"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux"
@@ -32,7 +33,7 @@ func (s *Server) initTracer(ctx context.Context) {
 	client := otlptracegrpc.NewClient()
 	exporter, err := otlptrace.New(ctx, client)
 	if err != nil {
-		s.logger.Error("creating OTLP trace exporter", err)
+		s.logger.Error("creating OTLP trace exporter", slog.Any("error", err))
 	}
 
 	s.tracerProvider = sdktrace.NewTracerProvider(

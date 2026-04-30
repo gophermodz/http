@@ -69,7 +69,7 @@ func (s *Server) Run(ctx context.Context) error {
 		<-ctx.Done()
 		l.Info("[INFRA-HTTP] server shutting down")
 		if err := srv.Shutdown(ctx); err != nil {
-			l.Error("[INFRA-HTTP] server shutdown error", err)
+			l.Error("[INFRA-HTTP] server shutdown error", slog.Any("error", err))
 		}
 	}()
 
@@ -85,7 +85,7 @@ func (s *Server) JSONResponse(w http.ResponseWriter, _ *http.Request, result int
 	body, err := json.Marshal(result)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		s.logger.Error("JSON marshal failed", err)
+		s.logger.Error("JSON marshal failed", slog.Any("error", err))
 		return
 	}
 
